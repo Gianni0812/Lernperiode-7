@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalorienrechner</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="Index.html">Start</a> |
+    <a href="Kalorienrechner.html">Kalorienrechner</a> |
+    <a href="Lebensmittel.html">Lebensmittel</a> |
+    <a href="Angaben.html">Angaben</a>
+    <a href="Anmelden.html" style="float:right">Anmelden</a>
+  </nav>
+  <hr>
+
+  <h2>Kalorienrechner</h2>
+
+  <textarea id="foodInput" rows="4" placeholder="z.B. 10g Bratwurst, 10ml O-Saft"></textarea><br>  
+  
+  <div>    
+      <button id="analyzeBtn">Analysieren</button>
+    </div>
+    
+    <div id="result"></div>
+  <div>
+    <h3>Deine Analyse für Heute</h3>
+    <p>Kalorien: </p>
+    <p>Kohlenhydrate: </p>
+    <p>Eiweiss: </p>
+    <p>Fett: </p>
+    <strong>ACHTUNG!</strong> Sie essen zu wenig. Erwartet: 2500, erreicht: 1258
+  </div>
+ <script src="Kalorienrechner.js"></script>
+</body>
+</html>
