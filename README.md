@@ -17,6 +17,7 @@ Ich erstelle ein eigenes Front-End für die Nutrition Analysis API von Edamam, w
 
 Heute habe ich angefangen, an meiner Kalorienrechner-Webseite zu arbeiten. Zuerst habe ich die Grundstruktur mit HTML und CSS aufgebaut, damit alles gut aussieht und funktioniert. Danach habe ich JavaScript eingebunden und getestet, ob der Button richtig reagiert. Ich habe gelernt, wie man Eingaben vom Nutzer ausliest und wie man später eine API einbinden kann. Das war mein erster Schritt in JavaScript, und ich fand es cool zu sehen, wie man die Seite interaktiv machen kann.
 
+<img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/8e4b0905-e0b7-4cce-b81c-83925c43767f" />
 
 ## 31.10.
 
