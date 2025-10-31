@@ -21,11 +21,16 @@ Heute habe ich angefangen, an meiner Kalorienrechner-Webseite zu arbeiten. Zuers
 
 ## 31.10.
 
+- [x] Designe èberarbeiten
 - [ ] API richtig einbauen
 - [ ] Ergebnisse auf der Webseite anzeigen
 - [ ] Nutzerdaten speichern (z. B. Alter, Gewicht)
-- [ ] Design und Fehlermeldungen verbessern
 
-✍️ Heute habe ich... (50-100 Wörter)
 
-☝️ Vergessen Sie nicht, Ihren Code auf github hochzuladen
+Ich bin heute nicht zufrieden mit meiner Leistung. Ich habe nichts geschaft. Ich das Design überarbeitet und denn Code für denn Kolorienrechner geschrieben. Jedoch habe ich es nicht geschaft die API zu verwenden. Ich werde das nächste woche in Angrif nehmen und werde mich bei meinem Lehrer erkundigen wie dies funktioniert. 
+
+## 07.11.
+- [ ] API verbinden
+- [ ] Kalorienrechner fertig machen
+- [ ] Nutzerdaten speichern (z.B. Alter, Gewicht)
+- [ ] Bei Lebensmittel, Lebensmittel abfragen können.
