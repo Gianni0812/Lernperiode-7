@@ -30,7 +30,15 @@ Heute habe ich angefangen, an meiner Kalorienrechner-Webseite zu arbeiten. Zuers
 Ich bin heute nicht zufrieden mit meiner Leistung. Ich habe nichts geschaft. Ich das Design überarbeitet und denn Code für denn Kolorienrechner geschrieben. Jedoch habe ich es nicht geschaft die API zu verwenden. Ich werde das nächste woche in Angrif nehmen und werde mich bei meinem Lehrer erkundigen wie dies funktioniert. 
 
 ## 07.11.
-- [ ] API verbinden
-- [ ] Kalorienrechner fertig machen
-- [ ] Nutzerdaten speichern (z.B. Alter, Gewicht)
+- [x] API verbinden
+- [x] Kalorienrechner fertig machen
+- [x] Nutzerdaten speichern (z.B. Alter, Gewicht)
 - [ ] Bei Lebensmittel, Lebensmittel abfragen können.
+
+Ich habe heute viel geschaft. Ich habe ändlich die API verbunden, die auch funktioniert hat, aber man nur irgendwie 3 mal benutzen kann. Triotzdem hat es funktioniert und ich habe alle bis auf Lebensmittel abfragen erledigt. Bei den Nutzerdaten wird es noch nicht gespeichert. Jedoch habe ich die eingaben programmiert, das heisst ich kann die eingaben angeben.
+
+## 14.11
+- [ ] Bei Lebensmittel, Lebensmittel abfragen können.
+- [ ] Grundumsatz aus Nutzerdaten berechnen
+- [ ] Nährwertdaten visuell besser darstellen
+- [ ] Design überarbeiten
