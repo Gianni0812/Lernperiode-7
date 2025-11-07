@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Anmelden</title>
+  <title>Angaben</title>
   <link rel="stylesheet" href="Style.css">
 </head>
 <body>
@@ -16,16 +16,28 @@
   </nav>
   <hr>
 
-  <h2>Anmelden</h2>
+  <h2>Angaben</h2>
 
   <form>
-    <label>E-Mail:</label><input type="email"><br>
-    <label>Passwort:</label><input type="password"><br>
-    <button>Anmelden</button>
+    <label for="alter">Alter:</label><br>
+    <input type="number" id="alter"><br><br>
+
+    <label for="groesse">Größe (in cm):</label><br>
+    <input type="number" id="groesse"><br><br>
+
+    <label for="gewicht">Gewicht (in kg):</label><br>
+    <input type="number" id="gewicht"><br><br>
+
+    <label for="sport">Sport (in Stunden):</label><br>
+    <input type="number" id="sport"><br><br>
+
+    <button type="button" id="speichernBtn">Speichern</button>
   </form>
 
-  <p>Noch keinen Account?</p>
-  <a href="Registrieren.html"><button>Registrieren</button></a>
+  <hr>
 
+  <div id="ausgabe"></div>
+
+  <script src="Angaben.js"></script>
 </body>
 </html>
