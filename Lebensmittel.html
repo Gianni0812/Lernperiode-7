@@ -2,11 +2,10 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Lebensmittel</title>
+  <title>Lebensmittelanalyse</title>
   <link rel="stylesheet" href="Style.css">
 </head>
 <body>
-
   <nav>
     <a href="Index.html">Start</a> |
     <a href="Kalorienrechner.html">Kalorienrechner</a> |
@@ -16,19 +15,13 @@
   </nav>
   <hr>
 
-  <h2>Lebensmittel</h2>
+  <h2>Lebensmittelanalyse</h2>
 
-  <p>Welches wollen Sie wissen?</p>
-  <input type="text" placeholder="z.B. Chicken">
-  <button>Senden</button>
+  <textarea id="foodInput" rows="2" placeholder="z. B. Chicken, Banana"></textarea><br>  
+  <button id="analyzeBtn">Analysieren</button>
 
-  <div>
-    <h3>Chicken</h3>
-    <p>Kalorien: ...</p>
-    <p>Fett: ...</p>
-    <p>Eiweiss: ...</p>
-    <button>Rezepte</button>
-  </div>
+  <div id="result"></div>
 
+  <script src="Lebensmittel.js"></script>
 </body>
 </html>

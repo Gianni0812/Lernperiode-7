@@ -16,24 +16,32 @@
   </nav>
   <hr>
 
-  <h2>Angaben</h2>
+  <h2>Deine Angaben</h2>
 
-  <form>
-    <label>Alter:</label><input type="number"><br>
-    <label>Größe:</label><input type="number"><br>
-    <label>Gewicht:</label><input type="number"><br>
-    <label>Sport (in h):</label><input type="number"><br>
-    <button>Senden</button>
-  </form>
+  <label>Alter: <input type="number" id="alter"></label><br>
+  <label>Gewicht (kg): <input type="number" id="gewicht"></label><br>
+  <label>Größe (cm): <input type="number" id="groesse"></label><br>
+  <label>Sport (h/Woche): <input type="number" id="sport"></label><br><br>
 
-  <div>
-    <h3>Deine Angaben</h3>
-    <p>Alter: ...</p>
-    <p>Größe: ...</p>
-    <p>Gewicht: ...</p>
-    <p>Sie sollen essen:</p>
-    <p>Kalorien: ..., Fett: ..., Eiweiss: ...</p>
-  </div>
+  <button onclick="speichern()">Speichern</button>
+
+  <p id="bestaetigung"></p>
+
+  <script>
+    function speichern() {
+      const alter = document.getElementById('alter').value;
+      const gewicht = document.getElementById('gewicht').value;
+      const groesse = document.getElementById('groesse').value;
+      const sport = document.getElementById('sport').value;
+
+      localStorage.setItem("alter", alter);
+      localStorage.setItem("gewicht", gewicht);
+      localStorage.setItem("groesse", groesse);
+      localStorage.setItem("sport", sport);
+
+      document.getElementById("bestaetigung").innerText = "Angaben wurden gespeichert ";
+    }
+  </script>
 
 </body>
 </html>
