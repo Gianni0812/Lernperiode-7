@@ -38,7 +38,15 @@ Ich bin heute nicht zufrieden mit meiner Leistung. Ich habe nichts geschaft. Ich
 Ich habe heute viel geschaft. Ich habe ändlich die API verbunden, die auch funktioniert hat, aber man nur irgendwie 3 mal benutzen kann. Triotzdem hat es funktioniert und ich habe alle bis auf Lebensmittel abfragen erledigt. Bei den Nutzerdaten wird es noch nicht gespeichert. Jedoch habe ich die eingaben programmiert, das heisst ich kann die eingaben angeben.
 
 ## 14.11
-- [ ] Bei Lebensmittel, Lebensmittel abfragen können.
-- [ ] Grundumsatz aus Nutzerdaten berechnen
+- [x] Bei Lebensmittel, Lebensmittel abfragen können.
+- [x] Grundumsatz aus Nutzerdaten berechnen
 - [ ] Nährwertdaten visuell besser darstellen
-- [ ] Design überarbeiten
+- [x] Design überarbeiten
+
+Ich habe heute das Design einwenig überarbeitet und den Grundumsatz aus den Nutzerdaten berechnet. Dann habe ich auch den Kalorienrechner ansich noch mals einwenig obtiemiert und die Lebensmittel abfrage erstellt. Leider gibt es mir noch kein Lebensmittel aus. Ich muss das nochmal überarbeiten und schauen wie ich das am besten hin bekomme.
+
+## 21.11
+- [ ] Lebensmittel abfrage vervollständigen
+- [ ] Anmelde option erstellen (ohne Datenbank)
+- [ ] Kalorienrechner verfeinern
+- [ ] Desgin bearbeiten
