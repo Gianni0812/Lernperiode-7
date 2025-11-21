@@ -46,7 +46,15 @@ Ich habe heute viel geschaft. Ich habe ändlich die API verbunden, die auch funk
 Ich habe heute das Design einwenig überarbeitet und den Grundumsatz aus den Nutzerdaten berechnet. Dann habe ich auch den Kalorienrechner ansich noch mals einwenig obtiemiert und die Lebensmittel abfrage erstellt. Leider gibt es mir noch kein Lebensmittel aus. Ich muss das nochmal überarbeiten und schauen wie ich das am besten hin bekomme.
 
 ## 21.11
-- [ ] Lebensmittel abfrage vervollständigen
-- [ ] Anmelde option erstellen (ohne Datenbank)
-- [ ] Kalorienrechner verfeinern
+- [x] Lebensmittel abfrage vervollständigen
+- [x] Anmelde option erstellen (ohne Datenbank)
+- [x] Kalorienrechner verfeinern
 - [ ] Desgin bearbeiten
+      
+Ich habe heute viel geschaft. Das Problem ist bei meiner gratis API kann ich nicht unendlich testen. Ich habe meinen Code optimiert, jedoch ist es so das ich noch nicht weiss ob es funktioniert. Dies muss ich beim nächsten mal testen. Trotzdem habe ich heute 3 von 4 Arbeitspackete geschaft. für das Design überarbeiten hat es heute leider nicht mehr gereicht. 
+
+## 28.11
+- [ ] Benutzerdaten in Berechnungen nutzen
+- [ ] Design und Übersicht optimieren
+- [ ] Fehlerbehandlung verbessern
+- [ ] Datenspeicherung pro Tag vorbereiten
