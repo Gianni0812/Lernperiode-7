@@ -1,93 +1,91 @@
 const API_KEY = "WVbAvQmPysRvVmV1nLBVAWD9P7xJYgU5F9M3E9yp";
 
+
 document.getElementById("analyzeBtn").addEventListener("click", async () => {
-  const foodInput = document.getElementById("foodInput").value.trim();
+  const input = document.getElementById("foodInput").value.trim();
   const resultDiv = document.getElementById("result");
   const analyseDiv = document.getElementById("tagesAnalyse");
 
-  const alter = parseInt(localStorage.getItem("alter"), 10);
+  const alter = parseInt(localStorage.getItem("alter"));
   const gewicht = parseFloat(localStorage.getItem("gewicht"));
   const groesse = parseFloat(localStorage.getItem("groesse"));
   const sport = parseFloat(localStorage.getItem("sport"));
 
-  if (isNaN(alter) || isNaN(gewicht) || isNaN(groesse) || isNaN(sport)) {
+  if (!alter || !gewicht || !groesse || !sport) {
     analyseDiv.innerHTML = `<p style="color:red;">Bitte zuerst Ihre Angaben auf der Seite „Angaben“ eintragen.</p>`;
     return;
   }
 
-  if (!foodInput) {
+  if (!input) {
     alert("Bitte mindestens ein Lebensmittel mit Menge eingeben (z. B. „100g chicken“).");
     return;
   }
 
-  const items = foodInput.split(",").map(s => s.trim());
-  let kalorienGesamt = 0;
-  let resultHTML = "";
+  const items = input.split(",").map(e => e.trim());
+  let totalCalories = 0;
+  let output = "";
 
   for (const item of items) {
-    const match = item.match(/^(\d+(?:\.\d+)?)\s*g\s*(.+)$/i);
+    const match = item.match(/^(\d+)\s*g\s+(.+)$/i);
     if (!match) {
-      resultHTML += `<p>${item.toUpperCase()}: Format ungültig (z. B. „100g chicken“).</p>`;
+      output += `<p>${item}: Ungültiges Format (z. B. „100g chicken“).</p>`;
       continue;
     }
 
     const menge = parseFloat(match[1]);
     const lebensmittel = match[2];
 
-    const searchUrl = `https://api.nal.usda.gov/fdc/v1/foods/search?query=${encodeURIComponent(lebensmittel)}&api_key=${API_KEY}`;
     try {
-      const searchResp = await fetch(searchUrl);
-      if (!searchResp.ok) throw new Error(`Suche fehlerhaft: ${searchResp.status}`);
-      const searchData = await searchResp.json();
-      if (!searchData.foods || searchData.foods.length === 0) {
-        resultHTML += `<p>${lebensmittel.toUpperCase()}: nicht gefunden.</p>`;
+      const search = await fetch(`https://api.nal.usda.gov/fdc/v1/foods/search?query=${encodeURIComponent(lebensmittel)}&api_key=${API_KEY}`);
+      const searchData = await search.json();
+      const food = searchData.foods?.[0];
+      if (!food) {
+        output += `<p>${lebensmittel.toUpperCase()}: nicht gefunden.</p>`;
         continue;
       }
 
-      const food = searchData.foods[0];
-      const fdcId = food.fdcId;
+      const detail = await fetch(`https://api.nal.usda.gov/fdc/v1/food/${food.fdcId}?api_key=${API_KEY}`);
+      const detailData = await detail.json();
 
-      const detailUrl = `https://api.nal.usda.gov/fdc/v1/food/${fdcId}?api_key=${API_KEY}`;
-      const detailResp = await fetch(detailUrl);
-      if (!detailResp.ok) throw new Error(`Details fehlerhaft: ${detailResp.status}`);
-      const detailData = await detailResp.json();
+      const nutrients = detailData.foodNutrients;
 
-      const nutrients = detailData.foodNutrients || [];
+      const kcal = getNutrient(nutrients, "Energy");
+      const fat = getNutrient(nutrients, "Total lipid");
+      const protein = getNutrient(nutrients, "Protein");
+      const carbs = getNutrient(nutrients, "Carbohydrate");
 
-      const kcalPer100g = (() => {
-        const n = nutrients.find(nu => nu.nutrientName && nu.nutrientName.toLowerCase().includes("energy"));
-        return n ? n.value : 0;
-      })();
+      const cal = kcal * menge / 100;
+      const fatVal = fat * menge / 100;
+      const protVal = protein * menge / 100;
+      const carbVal = carbs * menge / 100;
 
-      const kcalItem = (kcalPer100g * menge / 100);
-      kalorienGesamt += kcalItem;
+      totalCalories += cal;
 
-      resultHTML += `
+      output += `
         <div>
-          <h3>${lebensmittel.toUpperCase()} (${menge} g)</h3>
-          <p>Kalorien: ${kcalItem.toFixed(1)} kcal</p>
+          <h3>${lebensmittel.toUpperCase()} (${menge}g)</h3>
+          <p>Kalorien: ${cal.toFixed(1)} kcal</p>
+          <p>Fett: ${fatVal.toFixed(1)} g</p>
+          <p>Eiweiß: ${protVal.toFixed(1)} g</p>
+          <p>Kohlenhydrate: ${carbVal.toFixed(1)} g</p>
         </div>
       `;
-    } catch (error) {
-      resultHTML += `<p>${item.toUpperCase()}: Fehler (${error.message}).</p>`;
+    } catch (err) {
+      output += `<p>${lebensmittel.toUpperCase()}: Fehler – ${err.message}</p>`;
     }
   }
 
-  resultDiv.innerHTML = resultHTML;
+  resultDiv.innerHTML = output;
 
-  const grundumsatz = 10 * gewicht + 6.25 * groesse - 5 * alter + 5;
-  let faktor = 1.2;
-  if (sport > 0 && sport <= 3) faktor = 1.375;
-  else if (sport > 3 && sport <= 5) faktor = 1.55;
-  else if (sport > 5) faktor = 1.725;
-  const tagesbedarf = Math.round(grundumsatz * faktor);
-
+  const bedarf = 2500 - (sport * 100); // einfacher Schätzwert
   analyseDiv.innerHTML = `
-    <p><strong>Dein Tagesbedarf:</strong> ${tagesbedarf} kcal</p>
-    <p><strong>Gegessen:</strong> ${kalorienGesamt.toFixed(1)} kcal</p>
-    <p><strong>Ergebnis:</strong> ${kalorienGesamt >= tagesbedarf
-      ? '✅ Du hast genug gegessen!'
-      : `⚠️ Du hast zu wenig gegessen (${(tagesbedarf - kalorienGesamt).toFixed(1)} kcal fehlen)`}</p>
+    <h3>Analyse heute</h3>
+    <p>Insgesamt: ${totalCalories.toFixed(0)} kcal</p>
+    <p><strong>${totalCalories < bedarf ? "Du hast noch nicht genug gegessen." : "Du hast genug gegessen."}</strong></p>
   `;
 });
 
+function getNutrient(nutrients, name) {
+  const found = nutrients.find(n => n.nutrientName.toLowerCase().includes(name.toLowerCase()));
+  return found ? found.value : 0;
+}

@@ -24,27 +24,24 @@ document.getElementById("analyzeBtn").addEventListener("click", async () => {
     const fdcId = searchData.foods[0].fdcId;
     const detailUrl = `https://api.nal.usda.gov/fdc/v1/food/${fdcId}?api_key=${API_KEY}`;
     const detailResp = await fetch(detailUrl);
-    if (!detailResp.ok) throw new Error(`Details fehlgeschlagen: ${detailResp.status}`);
+    if (!detailResp.ok) throw new Error(`Detaildaten fehlgeschlagen: ${detailResp.status}`);
     const detailData = await detailResp.json();
 
     const nutrients = detailData.foodNutrients || [];
 
-    const getNutrient = (terms) => {
-      for (const term of terms) {
-        const n = nutrients.find(n => n.nutrientName && n.nutrientName.toLowerCase().includes(term));
-        if (n) return `${n.value} ${n.unitName}`;
-      }
-      return "nicht gefunden";
+    const get = (name) => {
+      const found = nutrients.find(n => n.nutrientName && n.nutrientName.toLowerCase().includes(name));
+      return found ? `${found.value} ${found.unitName}` : "Keine Angabe";
     };
 
-    const kcal = getNutrient(["energy", "calories"]);
-    const protein = getNutrient(["protein"]);
-    const fat = getNutrient(["fat"]);
-    const carbs = getNutrient(["carbohydrate", "carbs"]);
+    const kcal = get("energy");
+    const protein = get("protein");
+    const fat = get("fat");
+    const carbs = get("carbohydrate");
 
     resultDiv.innerHTML = `
       <div class="analyse">
-        <h3>${input.toUpperCase()}</h3>
+        <h3>${detailData.description}</h3>
         <p><strong>Kalorien:</strong> ${kcal}</p>
         <p><strong>Fett:</strong> ${fat}</p>
         <p><strong>Eiweiß:</strong> ${protein}</p>

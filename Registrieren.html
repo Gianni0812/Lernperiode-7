@@ -7,25 +7,33 @@
 </head>
 <body>
 
-  <nav>
-    <a href="Index.html">Start</a> |
-    <a href="Kalorienrechner.html">Kalorienrechner</a> |
-    <a href="Lebensmittel.html">Lebensmittel</a> |
-    <a href="Angaben.html">Angaben</a>
-    <a href="Anmelden.html" style="float:right">Anmelden</a>
-  </nav>
-  <hr>
-
   <h2>Registrieren</h2>
 
-  <form>
-    <label>Email:</label><input type="email"><br>
-    <label>Alter:</label><input type="number"><br>
-    <label>Größe (cm):</label><input type="number"><br>
-    <label>Sport (in h):</label><input type="number"><br>
-    <label>Passwort:</label><input type="password"><br>
-    <button>Registrieren</button>
-  </form>
+  <label for="regUsername">Benutzername:</label><br>
+  <input type="text" id="regUsername"><br><br>
 
+  <label for="regPassword">Passwort:</label><br>
+  <input type="password" id="regPassword"><br><br>
+
+  <label for="alter">Alter:</label><br>
+  <input type="number" id="alter"><br><br>
+
+  <label for="groesse">Größe (in cm):</label><br>
+  <input type="number" id="groesse"><br><br>
+
+  <label for="gewicht">Gewicht (in kg):</label><br>
+  <input type="number" id="gewicht"><br><br>
+
+  <label for="sport">Sport (in Stunden/Woche):</label><br>
+  <input type="number" id="sport"><br><br>
+
+  <button id="registerBtn">Registrieren</button>
+  <p id="regInfo"></p>
+
+  <hr>
+  <p>Bereits ein Konto?</p>
+  <button onclick="window.location.href='Anmelden.html'">Zur Anmeldung</button>
+
+  <script src="Registrieren.js"></script>
 </body>
 </html>

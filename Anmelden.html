@@ -2,42 +2,44 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Angaben</title>
+  <title>Anmelden</title>
   <link rel="stylesheet" href="Style.css">
 </head>
 <body>
+  <h2>Anmelden</h2>
 
-  <nav>
-    <a href="Index.html">Start</a> |
-    <a href="Kalorienrechner.html">Kalorienrechner</a> |
-    <a href="Lebensmittel.html">Lebensmittel</a> |
-    <a href="Angaben.html">Angaben</a>
-    <a href="Anmelden.html" style="float:right">Anmelden</a>
-  </nav>
-  <hr>
+  <label for="loginUser">Benutzername:</label><br>
+  <input type="text" id="loginUser"><br><br>
 
-  <h2>Angaben</h2>
+  <label for="loginPass">Passwort:</label><br>
+  <input type="password" id="loginPass"><br><br>
 
-  <form>
-    <label for="alter">Alter:</label><br>
-    <input type="number" id="alter"><br><br>
-
-    <label for="groesse">Größe (in cm):</label><br>
-    <input type="number" id="groesse"><br><br>
-
-    <label for="gewicht">Gewicht (in kg):</label><br>
-    <input type="number" id="gewicht"><br><br>
-
-    <label for="sport">Sport (in Stunden):</label><br>
-    <input type="number" id="sport"><br><br>
-
-    <button type="button" id="speichernBtn">Speichern</button>
-  </form>
+  <button onclick="anmelden()">Login</button>
+  <p id="loginInfo"></p>
 
   <hr>
 
-  <div id="ausgabe"></div>
+  <p>Noch kein Konto?</p>
+  <button onclick="window.location.href='Registrieren.html'">Registrieren</button>
 
-  <script src="Angaben.js"></script>
+  <hr>
+
+  <button onclick="window.location.href='Index.html'" style="margin-top:20px;">Zurück zur Startseite</button>
+
+  <script>
+    function anmelden() {
+      const user = document.getElementById("loginUser").value;
+      const pw = document.getElementById("loginPass").value;
+      const savedUser = localStorage.getItem("user");
+      const savedPw = localStorage.getItem("pw");
+
+      if (user === savedUser && pw === savedPw) {
+        document.getElementById("loginInfo").textContent = "Login erfolgreich!";
+        window.location.href = "Index.html";
+      } else {
+        document.getElementById("loginInfo").textContent = "Benutzername oder Passwort falsch.";
+      }
+    }
+  </script>
 </body>
 </html>
