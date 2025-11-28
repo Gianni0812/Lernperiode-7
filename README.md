@@ -54,7 +54,15 @@ Ich habe heute das Design einwenig überarbeitet und den Grundumsatz aus den Nut
 Ich habe heute viel geschaft. Das Problem ist bei meiner gratis API kann ich nicht unendlich testen. Ich habe meinen Code optimiert, jedoch ist es so das ich noch nicht weiss ob es funktioniert. Dies muss ich beim nächsten mal testen. Trotzdem habe ich heute 3 von 4 Arbeitspackete geschaft. für das Design überarbeiten hat es heute leider nicht mehr gereicht. 
 
 ## 28.11
-- [ ] Benutzerdaten in Berechnungen nutzen
+- [x] Benutzerdaten in Berechnungen nutzen
 - [ ] Design und Übersicht optimieren
-- [ ] Fehlerbehandlung verbessern
-- [ ] Datenspeicherung pro Tag vorbereiten
+- [x] Fehlerbehandlung verbessern
+- [x] Datenspeicherung pro Tag vorbereiten
+
+Ich habe heute viel geschafft. Die Benutzerdaten werden jetzt in die Berechnung einbezogen, und die Tagesdaten werden gespeichert. Außerdem funktioniert die Fehlerbehandlung besser. Testen konnte ich es leider nicht richtig, weil meine API begrenzt ist. Drei von vier Arbeitspaketen sind erledigt – fürs Design hat die Zeit nicht mehr gereicht.
+
+## 12.12
+- [ ] Verlauf-Seite für Tagesübersicht
+- [ ] Lebensmittel-Eingaben speichern
+- [ ] Lebensmittel-Eingabe verbessern
+- [ ] Design überarbeiten
