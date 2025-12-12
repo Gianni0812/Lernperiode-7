@@ -62,10 +62,10 @@ Ich habe heute viel geschaft. Das Problem ist bei meiner gratis API kann ich nic
 Ich habe heute viel geschafft. Die Benutzerdaten werden jetzt in die Berechnung einbezogen, und die Tagesdaten werden gespeichert. Außerdem funktioniert die Fehlerbehandlung besser. Testen konnte ich es leider nicht richtig, weil meine API begrenzt ist. Drei von vier Arbeitspaketen sind erledigt – fürs Design hat die Zeit nicht mehr gereicht.
 
 ## 12.12
-- [ ] Verlauf-Seite für Tagesübersicht
+- [x] Verlauf-Seite für Tagesübersicht
 - [ ] Lebensmittel-Eingaben speichern
-- [ ] Lebensmittel-Eingabe verbessern
-- [ ] Design überarbeiten
+- [x] Lebensmittel-Eingabe verbessern
+- [x] Design überarbeiten
 
 Ich habe heute viel geschafft. Die Benutzerdaten fliessen jetzt in die Berechnung ein und die Tageswerte werden gespeichert. Die Verlauf-Seite zeigt alle bisherigen Kalorienübersichten an. Das Design ist überarbeitet, aber die Buttons sind noch fehlerhaft sie bleiben weiss, bis man mit der Maus darüber fährt. Das Speichern der Lebensmittel-Eingaben habe ich noch nicht umgesetzt. Dies werde ich nächste Woche in Angriff nehmen.
 
