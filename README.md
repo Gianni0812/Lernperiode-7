@@ -66,3 +66,10 @@ Ich habe heute viel geschafft. Die Benutzerdaten werden jetzt in die Berechnung 
 - [ ] Lebensmittel-Eingaben speichern
 - [ ] Lebensmittel-Eingabe verbessern
 - [ ] Design überarbeiten
+
+Ich habe heute viel geschafft. Die Benutzerdaten fliessen jetzt in die Berechnung ein und die Tageswerte werden gespeichert. Die Verlauf-Seite zeigt alle bisherigen Kalorienübersichten an. Das Design ist überarbeitet, aber die Buttons sind noch fehlerhaft sie bleiben weiss, bis man mit der Maus darüber fährt. Das Speichern der Lebensmittel-Eingaben habe ich noch nicht umgesetzt. Dies werde ich nächste Woche in Angriff nehmen.
+
+## 19.12
+- [ ] Lebensmittel-Eingaben speichern
+- [ ] Button Überarbeiten
+- [ ] API nochmals anschauen
