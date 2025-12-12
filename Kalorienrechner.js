@@ -1,7 +1,7 @@
 const API_KEY = "WVbAvQmPysRvVmV1nLBVAWD9P7xJYgU5F9M3E9yp";
 
 document.getElementById("analyzeBtn").addEventListener("click", async () => {
-  const input = document.getElementById("foodInput").value.trim();
+  const foodItems = document.querySelectorAll(".food-item");
   const resultDiv = document.getElementById("result");
   const analyseDiv = document.getElementById("tagesAnalyse");
 
@@ -18,19 +18,40 @@ document.getElementById("analyzeBtn").addEventListener("click", async () => {
     return;
   }
 
-  if (!input) {
-    resultDiv.innerHTML = `<p style="color:red;">Bitte gib mindestens ein Lebensmittel ein (z. B. „100g chicken“).</p>`;
-    return;
+  const foods = [];
+
+  for (const item of foodItems) {
+    const menge = item.querySelector(".menge-input").value.trim();
+    const name = item.querySelector(".name-input").value.trim();
+    if (!menge || !name) {
+      resultDiv.innerHTML += `<p style="color:red;">Bitte Menge und Lebensmittel korrekt angeben.</p>`;
+      return;
+    }
+    foods.push(`${menge}g ${name}`);
   }
 
-  const items = input.split(",").map(e => e.trim());
+  await verarbeiteLebensmittel(foods, alter, gewicht, groesse, sport, resultDiv, analyseDiv);
+});
+
+function addFood() {
+  const container = document.getElementById("foodList");
+  const div = document.createElement("div");
+  div.className = "food-item";
+  div.innerHTML = `
+    <input type="number" placeholder="Menge (g)" class="menge-input" />
+    <input type="text" placeholder="Lebensmittel" class="name-input" />
+  `;
+  container.appendChild(div);
+}
+
+async function verarbeiteLebensmittel(items, alter, gewicht, groesse, sport, resultDiv, analyseDiv) {
   let totalCalories = 0;
   let output = "";
 
   for (const item of items) {
     const match = item.match(/^(\d+)\s*g\s+(.+)$/i);
     if (!match) {
-      output += `<p style="color:red;">Eingabeformat falsch bei: <strong>${item}</strong>. Verwende z. B. „100g chicken“.</p>`;
+      output += `<p style="color:red;">Eingabeformat ungültig bei: <strong>${item}</strong>.</p>`;
       continue;
     }
 
@@ -44,7 +65,7 @@ document.getElementById("analyzeBtn").addEventListener("click", async () => {
 
       const food = searchData.foods?.[0];
       if (!food) {
-        output += `<p style="color:red;">Keine Ergebnisse gefunden für: <strong>${lebensmittel}</strong></p>`;
+        output += `<p style="color:red;">Keine Ergebnisse für: <strong>${lebensmittel}</strong></p>`;
         continue;
       }
 
@@ -97,7 +118,7 @@ document.getElementById("analyzeBtn").addEventListener("click", async () => {
     bedarf: bedarf
   };
   localStorage.setItem("tageDaten", JSON.stringify(gespeicherteDaten));
-});
+}
 
 function getNutrient(nutrients, name) {
   const found = nutrients.find(n => n.nutrientName.toLowerCase().includes(name.toLowerCase()));
