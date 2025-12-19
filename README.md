@@ -84,3 +84,9 @@ Hier kann man sehen wie ich meine Eingaben mache und für Grösse gewicht ect.
 
 ![20251219-1030-16 7076389](https://github.com/user-attachments/assets/3eaea815-3d70-4ecc-ad08-3eab4b030eec)
 
+Ich habe auch noch weitere Seiten, die man alle in der Navigation erreichen kann, wie man hier schön sehen kann.
+
+<img width="1897" height="179" alt="image" src="https://github.com/user-attachments/assets/21aa55a9-2db4-4857-b5ee-2253e4dbb755" />
+
+## Reflexion
+Ich bin sehr stolz auf mein Projekt und finde es ist mir gut gelungen. Das Problem ist leider nur die API. Trotzdem habe ich viel gelernt und bin überzeugt das beim nächsten mal die API funktioniert und mein Projekt einwandfrei funktioniert.
