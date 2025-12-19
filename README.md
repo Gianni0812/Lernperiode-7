@@ -73,3 +73,14 @@ Ich habe heute viel geschafft. Die Benutzerdaten fliessen jetzt in die Berechnun
 - [ ] Lebensmittel-Eingaben speichern
 - [ ] Button Überarbeiten
 - [ ] API nochmals anschauen
+
+In dieser Lernperiode habe ich einen Kalorienrechner erstellt. Leider Funktioniert er nicht so gut. Ich hatte schon am Anfang probleme mit der API und konnte es nicht lösen. Ich habe die API auch geändert, jedoch funktioniert es leider nicht. Aber trotzdem bin ich sehr stolz auf mein Projekt. Bis auf die API funktioniert alles sehr gut und meine Website ist sehr gut geworden. 
+
+<img width="1889" height="1084" alt="image" src="https://github.com/user-attachments/assets/a46c6fe2-003f-45b4-8d4c-b769e4003562" />
+
+Hier sieht man Zumbeispiel wie der Kalorienrechner Aussieht und man sollte dort eingeben was man gegessen hat. Das problem ist das halt durch die API die nicht funktioniert dies nicht möglich ist.
+
+Hier kann man sehen wie ich meine Eingaben mache und für Grösse gewicht ect.
+
+![20251219-1030-16 7076389](https://github.com/user-attachments/assets/3eaea815-3d70-4ecc-ad08-3eab4b030eec)
+
