@@ -71,8 +71,8 @@ textarea {
 }
 
 button {
-  background-color: #0077cc;
-  color: white;
+  background-color: #0077cc !important;
+  color: white !important;
   padding: 12px 20px;
   border: none;
   border-radius: 8px;
@@ -87,8 +87,8 @@ button {
 button:hover,
 button:focus,
 button:active {
-  background-color: #005fa3;
-  color: white;
+  background-color: #005fa3 !important;
+  color: white !important;
   outline: none;
 }
 
