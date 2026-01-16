@@ -1,92 +1,90 @@
-# Lernperiode-7
-24.10. bis 19.12.2025
+# Lernperiode 7  
+**24.10.2025 bis 19.12.2025**
 
 ## Grob-Planung
 
-1. Für welche API möchten Sie ein eigenes *front end* erstellen?
-2. Welche groben Funktionalitäten soll Ihr *front end* zur Verfügung stellen?
-3. Was möchten Sie insbesondere dabei lernen oder üben?
+1. Für welche API möchte ich ein eigenes *Front-End* erstellen?  
+2. Welche grundlegenden Funktionalitäten soll das *Front-End* bieten?  
+3. Was möchte ich dabei insbesondere lernen oder üben?
 
-Ich erstelle ein eigenes Front-End für die Nutrition Analysis API von Edamam, weil sie mir ermöglicht, die Kalorien und Nährwerte von Lebensmitteln automatisch zu berechnen. Mein Ziel ist es, eine Webseite zu bauen, auf der man Lebensmittel eingeben kann und direkt die Analyse dazu sieht. Außerdem sollen Nutzer ihre persönlichen Angaben wie Alter, Gewicht oder Sportzeit eintragen können, um passendere Ernährungsempfehlungen zu bekommen. Dabei möchte ich vor allem lernen, wie man mit JavaScript eine API einbindet und die Daten live auf der Seite anzeigen lässt.
+Ich erstelle ein eigenes **Front-End für die Nutrition Analysis API von Edamam**, da diese API die Kalorien und Nährwerte von Lebensmitteln automatisch berechnen kann. Ziel ist es, eine Webseite zu entwickeln, auf der Nutzer Lebensmittel eingeben und direkt die entsprechende Analyse sehen können. Zusätzlich sollen persönliche Angaben wie Alter, Gewicht oder Sportzeit erfasst werden, um passendere Ernährungsempfehlungen zu erhalten.  
+Dabei möchte ich vor allem lernen, wie man mit **JavaScript eine API einbindet** und die erhaltenen Daten **dynamisch auf einer Webseite darstellt**.
 
-## 24.10.
+## 24.10.2025
+- [x] Arbeitspaket 1: Skizzen für das *Front-End* erstellen (inkl. Interaktionen mit und ohne API-Aufruf)  
+- [x] Arbeitspaket 2: Entwurf rudimentär mit HTML und CSS umsetzen  
+- [x] Arbeitspaket 3: Ersten JavaScript-Code als *Proof of Concept* schreiben (z. B. Button-Reaktion)  
 
-- [x] Arbeitspaket 1: Erstellen Sie mehrere Skizzen von Ihrem *front end*. Überlegen Sie sich auch, welche Elemente die Interaktion mit dem *back end* auslösen und wie sich die Oberfläche dadurch verändert. Bauen Sie auch Interaktionen ein, die *keinen* Aufruf der API benötigen, sondern sich im *client* bearbeiten lassen (sortieren, suchen etc.)
-- [x] Arbeitspaket 2: Setzen Sie in HTML und CSS Ihren Entwurf auf rudimentäre Weise um.
-- [x] Arbeitspaket 3: Schreiben Sie ersten JS-Code als *proof of concept* (bspw. Meldung bei Klick auf Knopf-Element)
-
-Heute habe ich angefangen, an meiner Kalorienrechner-Webseite zu arbeiten. Zuerst habe ich die Grundstruktur mit HTML und CSS aufgebaut, damit alles gut aussieht und funktioniert. Danach habe ich JavaScript eingebunden und getestet, ob der Button richtig reagiert. Ich habe gelernt, wie man Eingaben vom Nutzer ausliest und wie man später eine API einbinden kann. Das war mein erster Schritt in JavaScript, und ich fand es cool zu sehen, wie man die Seite interaktiv machen kann.
+Heute habe ich mit der Arbeit an meiner Kalorienrechner-Webseite begonnen. Zuerst habe ich die Grundstruktur mit HTML und CSS aufgebaut. Danach habe ich JavaScript eingebunden und getestet, ob Buttons korrekt reagieren. Ich habe gelernt, wie man Nutzereingaben ausliest und wie später eine API eingebunden werden kann. Das war mein erster richtiger Schritt mit JavaScript, und es war motivierend zu sehen, wie die Seite interaktiv wird.
 
 <img width="1536" height="2048" alt="image" src="https://github.com/user-attachments/assets/8e4b0905-e0b7-4cce-b81c-83925c43767f" />
 
-## 31.10.
+## 31.10.2025
+- [x] Design überarbeiten  
+- [ ] API korrekt einbinden  
+- [ ] Ergebnisse auf der Webseite anzeigen  
+- [ ] Nutzerdaten speichern (z. B. Alter, Gewicht)  
 
-- [x] Designe èberarbeiten
-- [ ] API richtig einbauen
-- [ ] Ergebnisse auf der Webseite anzeigen
-- [ ] Nutzerdaten speichern (z. B. Alter, Gewicht)
+Heute bin ich mit meiner Leistung nicht zufrieden. Ich habe zwar das Design überarbeitet und Code für den Kalorienrechner geschrieben, es jedoch nicht geschafft, die API korrekt einzubinden. Das werde ich nächste Woche erneut angehen und mich zusätzlich bei meinem Lehrer informieren.
 
+## 07.11.2025
+- [x] API verbinden  
+- [x] Kalorienrechner fertigstellen  
+- [x] Nutzerdaten erfassen (z. B. Alter, Gewicht)  
+- [ ] Lebensmittel gezielt abfragen  
 
-Ich bin heute nicht zufrieden mit meiner Leistung. Ich habe nichts geschaft. Ich das Design überarbeitet und denn Code für denn Kolorienrechner geschrieben. Jedoch habe ich es nicht geschaft die API zu verwenden. Ich werde das nächste woche in Angrif nehmen und werde mich bei meinem Lehrer erkundigen wie dies funktioniert. 
+Heute habe ich viel erreicht. Ich habe die API erfolgreich eingebunden, allerdings ist sie stark limitiert und kann nur wenige Anfragen ausführen. Trotzdem funktioniert sie grundsätzlich. Die Nutzerdaten können nun eingegeben werden, auch wenn sie noch nicht dauerhaft gespeichert werden. Die gezielte Lebensmittelabfrage fehlt noch.
 
-## 07.11.
-- [x] API verbinden
-- [x] Kalorienrechner fertig machen
-- [x] Nutzerdaten speichern (z.B. Alter, Gewicht)
-- [ ] Bei Lebensmittel, Lebensmittel abfragen können.
+## 14.11.2025
+- [x] Lebensmittel abfragen  
+- [x] Grundumsatz aus Nutzerdaten berechnen  
+- [ ] Nährwertdaten visuell besser darstellen  
+- [x] Design überarbeiten  
 
-Ich habe heute viel geschaft. Ich habe ändlich die API verbunden, die auch funktioniert hat, aber man nur irgendwie 3 mal benutzen kann. Triotzdem hat es funktioniert und ich habe alle bis auf Lebensmittel abfragen erledigt. Bei den Nutzerdaten wird es noch nicht gespeichert. Jedoch habe ich die eingaben programmiert, das heisst ich kann die eingaben angeben.
+Heute habe ich das Design weiter verbessert und den Grundumsatz anhand der Nutzerdaten berechnet. Zusätzlich habe ich den Kalorienrechner optimiert und die Lebensmittelabfrage implementiert. Leider werden die Lebensmittel noch nicht korrekt angezeigt, weshalb ich diesen Teil nochmals überarbeiten muss.
 
-## 14.11
-- [x] Bei Lebensmittel, Lebensmittel abfragen können.
-- [x] Grundumsatz aus Nutzerdaten berechnen
-- [ ] Nährwertdaten visuell besser darstellen
-- [x] Design überarbeiten
+## 21.11.2025
+- [x] Lebensmittelabfrage vervollständigen  
+- [x] Anmeldeoption erstellen (ohne Datenbank)  
+- [x] Kalorienrechner verfeinern  
+- [ ] Design weiter bearbeiten  
 
-Ich habe heute das Design einwenig überarbeitet und den Grundumsatz aus den Nutzerdaten berechnet. Dann habe ich auch den Kalorienrechner ansich noch mals einwenig obtiemiert und die Lebensmittel abfrage erstellt. Leider gibt es mir noch kein Lebensmittel aus. Ich muss das nochmal überarbeiten und schauen wie ich das am besten hin bekomme.
+Heute habe ich viel geschafft. Aufgrund der Einschränkungen der kostenlosen API konnte ich jedoch nicht beliebig testen. Ich habe den Code optimiert, bin mir aber noch nicht sicher, ob alles korrekt funktioniert. Drei von vier Arbeitspaketen sind erledigt, für das Design reichte die Zeit nicht mehr.
 
-## 21.11
-- [x] Lebensmittel abfrage vervollständigen
-- [x] Anmelde option erstellen (ohne Datenbank)
-- [x] Kalorienrechner verfeinern
-- [ ] Desgin bearbeiten
-      
-Ich habe heute viel geschaft. Das Problem ist bei meiner gratis API kann ich nicht unendlich testen. Ich habe meinen Code optimiert, jedoch ist es so das ich noch nicht weiss ob es funktioniert. Dies muss ich beim nächsten mal testen. Trotzdem habe ich heute 3 von 4 Arbeitspackete geschaft. für das Design überarbeiten hat es heute leider nicht mehr gereicht. 
+## 28.11.2025
+- [x] Benutzerdaten in Berechnungen integrieren  
+- [ ] Design und Übersicht optimieren  
+- [x] Fehlerbehandlung verbessern  
+- [x] Datenspeicherung pro Tag vorbereiten  
 
-## 28.11
-- [x] Benutzerdaten in Berechnungen nutzen
-- [ ] Design und Übersicht optimieren
-- [x] Fehlerbehandlung verbessern
-- [x] Datenspeicherung pro Tag vorbereiten
+Heute wurden die Benutzerdaten vollständig in die Berechnungen einbezogen, und Tagesdaten werden gespeichert. Auch die Fehlerbehandlung funktioniert deutlich besser. Aufgrund der API-Limitierung konnte ich nicht alles testen. Drei von vier Arbeitspaketen sind abgeschlossen.
 
-Ich habe heute viel geschafft. Die Benutzerdaten werden jetzt in die Berechnung einbezogen, und die Tagesdaten werden gespeichert. Außerdem funktioniert die Fehlerbehandlung besser. Testen konnte ich es leider nicht richtig, weil meine API begrenzt ist. Drei von vier Arbeitspaketen sind erledigt – fürs Design hat die Zeit nicht mehr gereicht.
+## 12.12.2025
+- [x] Verlauf-Seite für Tagesübersicht erstellen  
+- [ ] Lebensmittel-Eingaben speichern  
+- [x] Lebensmittel-Eingabe verbessern  
+- [x] Design überarbeiten  
 
-## 12.12
-- [x] Verlauf-Seite für Tagesübersicht
-- [ ] Lebensmittel-Eingaben speichern
-- [x] Lebensmittel-Eingabe verbessern
-- [x] Design überarbeiten
+Heute habe ich grosse Fortschritte gemacht. Die Verlauf-Seite zeigt alle bisherigen Tagesübersichten an, und die Benutzerdaten fliessen korrekt in die Berechnungen ein. Das Design wurde überarbeitet, allerdings gibt es noch Probleme mit den Buttons, da sie erst beim Darüberfahren sichtbar werden. Das Speichern der Lebensmittel-Eingaben ist noch offen.
 
-Ich habe heute viel geschafft. Die Benutzerdaten fliessen jetzt in die Berechnung ein und die Tageswerte werden gespeichert. Die Verlauf-Seite zeigt alle bisherigen Kalorienübersichten an. Das Design ist überarbeitet, aber die Buttons sind noch fehlerhaft sie bleiben weiss, bis man mit der Maus darüber fährt. Das Speichern der Lebensmittel-Eingaben habe ich noch nicht umgesetzt. Dies werde ich nächste Woche in Angriff nehmen.
+## 19.12.2025
+- [ ] Lebensmittel-Eingaben speichern  
+- [ ] Buttons überarbeiten  
+- [ ] API nochmals analysieren  
 
-## 19.12
-- [ ] Lebensmittel-Eingaben speichern
-- [ ] Button Überarbeiten
-- [ ] API nochmals anschauen
-
-In dieser Lernperiode habe ich einen Kalorienrechner erstellt. Leider Funktioniert er nicht so gut. Ich hatte schon am Anfang probleme mit der API und konnte es nicht lösen. Ich habe die API auch geändert, jedoch funktioniert es leider nicht. Aber trotzdem bin ich sehr stolz auf mein Projekt. Bis auf die API funktioniert alles sehr gut und meine Website ist sehr gut geworden. 
+In dieser Lernperiode habe ich einen **Kalorienrechner** entwickelt. Leider funktioniert die API nicht zuverlässig. Schon zu Beginn hatte ich Probleme mit der API, die ich nicht vollständig lösen konnte. Ich habe die API zwar gewechselt, jedoch ohne Erfolg. Trotzdem bin ich sehr stolz auf mein Projekt. Abgesehen von der API funktioniert die Webseite gut und ist optisch gelungen.
 
 <img width="1889" height="1084" alt="image" src="https://github.com/user-attachments/assets/a46c6fe2-003f-45b4-8d4c-b769e4003562" />
 
-Hier sieht man Zumbeispiel wie der Kalorienrechner Aussieht und man sollte dort eingeben was man gegessen hat. Das problem ist das halt durch die API die nicht funktioniert dies nicht möglich ist.
+Hier sieht man beispielsweise den Kalorienrechner, in den man eigentlich eingeben sollte, was man gegessen hat. Aufgrund der nicht funktionierenden API ist dies jedoch aktuell nicht möglich.
 
-Hier kann man sehen wie ich meine Eingaben mache und für Grösse gewicht ect.
+Hier ist die Eingabemaske für persönliche Daten wie Grösse und Gewicht zu sehen:
 
 ![20251219-1030-16 7076389](https://github.com/user-attachments/assets/3eaea815-3d70-4ecc-ad08-3eab4b030eec)
 
-Ich habe auch noch weitere Seiten, die man alle in der Navigation erreichen kann, wie man hier schön sehen kann.
+Zusätzlich gibt es weitere Seiten, die über die Navigation erreichbar sind:
 
 <img width="1897" height="179" alt="image" src="https://github.com/user-attachments/assets/21aa55a9-2db4-4857-b5ee-2253e4dbb755" />
 
 ## Reflexion
-Ich bin sehr stolz auf mein Projekt und finde es ist mir gut gelungen. Das Problem ist leider nur die API. Trotzdem habe ich viel gelernt und bin überzeugt das beim nächsten mal die API funktioniert und mein Projekt einwandfrei funktioniert.
+Ich bin sehr stolz auf mein Projekt und finde, dass es insgesamt gut gelungen ist. Das Hauptproblem war die API, die nicht zuverlässig funktioniert hat. Trotzdem habe ich viel gelernt, insbesondere im Umgang mit JavaScript, Front-End-Strukturen und APIs. Ich bin überzeugt, dass mir diese Erfahrungen beim nächsten Projekt helfen werden und dass eine zukünftige API-Integration deutlich besser funktionieren wird.
